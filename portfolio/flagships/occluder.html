@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Title | Maitreyi V. Shrinivas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../assets/favicon2.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/pages.css">
+
+</head>
+
+<body>
+
+
+<nav id="nav">
+  <a href="../index.html">HOME</a> /
+  <!--<a href="../../uiux/uiux_index.html">UI/UX</a>
+  <a href="../../3dxr/3dxr_index.html">3D/XR</a>-->
+  <a href="../../2d/2d_index.html">2D</a>
+</nav>
+
+
+
+<section class="project-hero">
+    <a href="../index.html" class="back">← back to portfolio</a>
+
+  <h1>The Occluder</h1>
+  <div class="project-meta">
+    Embedded Wearable System · 2025 · Arduino / Fusion360 / Coding
+  </div>
+</section>
+
+
+<!-- my carousel! -->
+<section class="project-carousel">
+
+  <div class="carousel-track">
+
+    <div class="carousel-slide">
+      <img src="../../assets/occluder_demo.png" alt="Wearable" class="zoomable">
+    </div>
+
+
+ <div class="carousel-slide">
+    <iframe 
+    src="https://youtu.be/USBVQfGMQb8"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe></div>
+
+   <div class="carousel-slide">
+  <iframe 
+    src="https://youtu.be/OBfoilGwslU"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+  </div>
+
+  <button class="carousel-btn prev">‹</button>
+<button class="carousel-btn next">›</button>
+
+</section>
+
+
+<!-- overview quick -->
+<section class="project-overview section">
+  <h2>Overview</h2>
+  <p>
+   The Occluder is a wearable interactive headpiece that physically and visually obstructs the user’s vision while responding to sound and motion. 
+   It combines custom 3D-printed mechanical structures with embedded electronics 
+   to create a reactive device that sits across the eyes like a visor. 
+   The project evolved from a complex, winged mechanical design to a simplified, 
+   assembly-optimized version prioritizing function, manufacturability, and reliability.
+   It is equal parts wearable object, kinetic sculpture, and embedded systems prototype.
+  </p>
+</section>
+
+
+<!-- deets -->
+<section class="project-details section">
+  <h2>Details</h2>
+
+  <div class="details-grid">
+
+<div class="detail-card" data-modal="concept">
+  <h3>Concept</h3>
+  <p>The Occluder is a wearable visor that blocks the wearer’s vision and reacts to movement and sound using internal electronics.
+     It was designed, modeled, printed, assembled, and tested as a working physical prototype.</p>
+</div>
+
+<div class="detail-card" data-modal="technology">
+  <h3>Technology</h3>
+  <p>
+    <ul class="tech-list">
+<li>Arduino Uno R3 (main controller)</li>
+
+<li>SSD1306 OLED display</li>
+
+<li>MPU6050 accelerometer</li>
+
+<li>MAX4466 microphone</li>
+
+<li>Two SG90 servos</li>
+
+<li>External AA battery pack</li>
+
+<li>3D printed  PLA casing</li>
+    </ul>
+  </p>
+</div>
+
+<div class="detail-card" data-modal="process">
+  <h3>Process</h3>
+  <p>
+    <ul class="tech-list">
+<li> Sketched the concept</li>
+
+<li> Modeled initial complex version</li>
+
+<li> Printed prototype</li>
+
+<li> Identified overcomplexity</li>
+
+<li> Simplified geometry</li>
+
+<li> Reprinted final version</li>
+
+<li> Integrated electronics</li>
+
+<li> Tested fit and motion</li>
+    </ul>
+  </p>
+</div>
+
+<div class="detail-card" data-modal="constraints">
+  <h3>Constraints</h3>
+  <p>
+    <ul class="tech-list">
+<li> Needed to fit on a human face</li>
+
+<li> Limited space for electronics</li>
+
+<li> Required 3D printing tolerances</li>
+
+<li> Battery placement constraints</li>
+
+<li> Servo torque and power limits</li>
+
+<li> Cost and complexity had to be reduced from the first prototype</li>
+    </ul>
+  </p>
+</div>
+
+  </div>
+</section>
+
+<div class="detail-modal" id="concept">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Concept</h2>
+    <p>
+      The Occluder is an interactive wearable device that physically obstructs the wearer’s visual field while incorporating embedded sensing and actuation systems to produce reactive behavior. The design merges sculptural form with mechanical functionality. The early design emphasized aesthetic wings and ornamental complexity, but practical evaluation revealed excessive geometric variation, inconsistent thicknesses, and assembly inefficiencies.
+<br>
+<br>
+The final iteration restructured the design into a visor-like modular assembly optimized for clean 3D printing, simplified mounting, and servo integration. It includes articulated wing components mounted via servo arms and custom attachment geometry, enabling mechanical movement driven by sensor input. The result is a fully assembled wearable kinetic object integrating mechanical structure, electronics housing, and user interaction into a cohesive physical system.
+<br>
+<br>
+    </p>
+  </div>
+</div>
+<div class="detail-modal" id="technology">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Technology</h2>
+    <p>
+
+<p>The base is comprised of:</p>
+<ul class="tech-list">
+    <li>
+        <p>Arduino Uno R3 running at 3.3V logic for sensor and display control.</p>
+    </li>
+    <li>
+        <p>Servos powered separately via an external 4x AA battery pack to handle higher current draw.</p>
+    </li>
+</ul>
+<p>For sensing, I used:</p>
+<ul class="tech-list">
+    <li>
+        <p>MPU6050 accelerometer/gyroscope: Detects head motion and orientation.</p>
+    </li>
+    <li>
+        <p>MAX4466 microphone module: Captures sound amplitude input for reactive behavior.</p>
+    </li>
+</ul>
+<p>Those sensors connect to these external modules:</p>
+<ul class="tech-list">
+    <li>
+        <p>SG90 micro servos (2x): Mechanically actuate wing components.</p>
+    </li>
+    <li>
+        <p>SSD1306 OLED display: Provides visual feedback on the visor surface.</p>
+    </li>
+    </li>
+</ul>
+<p>To power it, I used:</p>
+<ul class="tech-list">
+    <li>
+        <p>Dual power distribution:</p>
+        <ul class="tech-list">
+            <li>
+                <p>AA battery pack dedicated to servo power.</p>
+            </li>
+            <li>
+                <p>Separate battery source powering Arduino and low-voltage components.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>Direct soldered connections for servo power rails.</p>
+    </li>
+    <li>
+        <p>Internal wiring routed within the 3D printed cavity.</p>
+    </li>
+</ul>
+<p>To fabricate it, I made a:</p>
+<ul class="tech-list">
+    <li>
+        <p>Multi-part 3D printed housing:</p>
+        <ul class="tech-list">
+            <li>
+                <p>Top and bottom arc structures</p>
+            </li>
+            <li>
+                <p>Front casing</p>
+            </li>
+            <li>
+                <p>Wing modules</p>
+            </li>
+            <li>
+                <p>Custom servo arm attachment interface</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>And designed it to align servo shaft output with wing rotational axis.</p>
+    </li>
+    <li>
+        <p>The final version was optimized to eliminate inconsistent wall thickness and remove irregularities so it's watertight.</p>
+    </li>
+    </p>
+  </div>
+</div>
+
+
+<div class="detail-modal" id="process">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Process</h2>
+    <p>
+The development process began with conceptual sketching that established the aesthetic direction and interactive intent. Early drawings defined the winged form and identified required components, including LEDs, an OLED display, a microphone, an accelerometer, and servos. The reactive behavior was defined at a conceptual level before mechanical constraints were fully understood.
+<img src="../../assets/doc4.png" class="zoomable inline">
+<br><br>
+The first CAD prototype translated the sketches into a detailed 3D model emphasizing a lot of filleted edges and decorative complexity. During review, several issues became clear: the geometry was unnecessarily intricate, wall thickness varied across the structure, assembly was inefficient, and material and time costs were higher than justified by function.
+<img src="../../assets/doc3.png" class="zoomable inline">
+<br><br>
+This led to a design pivot. The form was simplified into a visor-like structure with standardized edge thickness and modular components. Embellishments were reduced, and the design prioritized structural integrity, clean printing, servo alignment, and mechanical clarity.
+<img src="../../assets/doc1.png" class="zoomable inline">
+>
+<br><br>
+Mechanical optimization followed. The servo arm interface was redesigned, and a custom attachment was modeled to securely mount the wings. Clearance for articulation was confirmed, and part fitment was refined to ensure reliable assembly after printing.
+<img src="../../assets/doc2.png" class="zoomable inline"
+<br><br>
+Electronics integration came next. The Arduino, sensors, and OLED were installed within the cavity. Servo power wiring was soldered, cables were routed through constrained internal space, and components were secured using tape and hot glue where necessary.
+<br><br>
+The final phase involved assembly and testing. Print fitment was verified, servo rotation was tested to ensure proper wing articulation, and sensor responsiveness was evaluated through motion and sound input. The completed device was worn and demonstrated as a functional prototype, reflecting iterative refinement driven by physical constraints rather than purely aesthetic ambition.
+<br><br>    
+</p>
+  </div>
+</div>
+<div class="detail-modal" id="constraints">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Constraints</h2>
+    <p>
+      The Occluder was shaped by multiple layers of constraint, beginning with ergonomics. The device needed to conform to the curvature of a human head while distributing weight in a way that avoided excessive front-loading from embedded electronics. Because it physically obstructs vision, it also had to remain stable during wear without causing discomfort or shifting under motion.
+<br><br>
+Manufacturing limitations introduced another set of constraints. The design relied on FDM 3D printing, which required consistent wall thickness, manageable overhangs, and awareness of print bed size limits. The first prototype revealed tolerance problems caused by varying edge thickness and overly complex geometry, leading to assembly inefficiencies and unnecessary material usage.
+<br><br>
+Electrical constraints significantly influenced the architecture. The SG90 servos drew more current than the Arduino could safely supply, requiring isolated external power. Voltage compatibility had to be managed carefully, particularly between 3.3V logic components and higher-draw actuators. Power distribution and soldered connections became structural considerations, not just electrical ones.
+<br><br>
+Spatial limitations inside the housing forced strict organization of internal components. The cavity volume was limited, wiring needed to be routed without obstructing servo motion, and the battery pack could not be housed internally without compromising weight or space, leading to external placement.
+<br><br>
+A broader conceptual constraint involved balancing complexity and function. The initial iteration prioritized ornamental wing geometry and layered form, but this increased cost, print risk, and mechanical inefficiency. The final version intentionally removed embellishments in favor of structural clarity and assembly reliability.
+<br><br>
+Finally, integration constraints tied mechanical and electronic decisions together. Servo torque limits dictated wing size and mass. OLED placement was constrained by visor thickness and frontal surface area. Microphone positioning directly impacted responsiveness to sound input. Every subsystem decision affected at least one other system.
+    <br><br>
+</p>
+  </div>
+</div>
+
+
+<!-- img gal -->
+<section class="project-gallery section">
+
+  <h2>Process & Documentation</h2>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-card">
+      <img src="../../assets/doc4.png" alt="Process Sketch" class="zoomable">
+      <div class="gallery-caption">
+        First sketch. Was initially going to be more of a headphone thing pre-pivot.
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="../../assets/occluder_internals.png" alt="Inside" class="zoomable">
+      <div class="gallery-caption">
+        Internals & their descriptions.
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="../../assets/doc3.png" alt=" Build" class="zoomable">
+      <div class="gallery-caption">
+        First Fusion 360 iteration pre-simplification.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div id="img-modal">
+  <img id="modal-img">
+</div>
+
+<section>
+  <footer>
+    <p>© 2025 Maitreyi V. Shrinivas ·  data integrity 99.9%</p>
+    <br>
+    <p>Built with HTML/CSS/JS</p>
+  </footer>
+
+</section>
+<!-- JS -->
+<script src="../../js/main.js"></script>
+<script src="../../js/carousel.js"></script>
+
+</body>
+</html>
+*-+ 

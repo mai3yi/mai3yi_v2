@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZONE ONE | Maitreyi V. Shrinivas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../assets/favicon2.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/pages.css">
+
+</head>
+
+<body>
+
+
+<nav id="nav">
+  <a href="../index.html">HOME</a>/
+  <!--<a href="../../uiux/uiux_index.html">UI/UX</a>/
+  <a href="../../3dxr/3dxr_index.html">3D/XR</a> -->
+  <a href="../../2d/2d_index.html">2D</a>
+</nav>
+
+
+
+<section class="project-hero">
+    <a href="../index.html" class="back">← back to portfolio</a>
+
+  <h1>ZONE ONE</h1>
+  <div class="project-meta">
+    Interactive VR Installation · 2025 · Unity / XR / Blender
+  </div>
+</section>
+
+
+<!-- my carousel! -->
+<section class="project-carousel">
+
+  <div class="carousel-track">
+
+    <div class="carousel-slide">
+  <iframe 
+    src="https://youtu.be/qev3pe3e834"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+     <!--<div class="carousel-slide">
+      <video controls>
+        <source src="../../assets/zone1_demo.mp4" type="video/mp4">
+      </video>
+    </div> -->
+
+    <div class="carousel-slide">
+      <img src="../../assets/render2.jpeg" alt="Zone One Environment" class="zoomable">
+    </div>
+
+        <div class="carousel-slide">
+      <img src="../../assets/z1_still2.png" alt="Zone One Environment" class="zoomable">
+    </div>
+
+        <div class="carousel-slide">
+      <img src="../../assets/inside.png" alt="Zone One Environment" class="zoomable">
+    </div>
+
+        <div class="carousel-slide">
+      <img src="../../assets/z1_still1 (1).png" alt="Zone One Environment" class="zoomable">
+    </div>
+  
+
+      <div class="carousel-slide">
+  <iframe 
+    src="https://www.youtube.com/watch?v=g2h6ZZs1HRs"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+  </div>
+<button class="carousel-btn prev">‹</button>
+<button class="carousel-btn next">›</button>
+</section>
+
+
+<!-- overview quick -->
+<section class="project-overview section">
+  <br>
+  <h2>Overview</h2>
+  <p>
+  Zone One is a single-scene VR environment focused on direct, physical interaction rather than navigation or narrative progression. Users remain within a fixed space and interact with objects by grabbing, throwing, and spray painting surfaces. The project intentionally limits scope to study how repeated, low-stakes actions affect user engagement over time.
+  </p>
+  <br>
+  <p>Zone One was presented as the final project of Art + Tech Studio I at Pratt Institute in 2025. The work was presented as an on-site VR installation with headset interaction, background music, and external screen capture in Myrtle Digital Plaza.
+  </p>
+</section>
+
+
+<!-- deets -->
+<section class="project-details section">
+  <h2>Details</h2>
+
+  <div class="details-grid">
+
+<div class="detail-card" data-modal="concept">
+  <h3>Concept</h3>
+  <p>Zone One is a VR immersive installation built in Unity for Meta Quest, with optional PC tethering for higher-fidelity rendering. 
+    The project was developed as a real-time interactive environment that supports gesture-based graffiti interaction, dynamic object handling, and time-based visual decay systems.
+    It was designed to function both as a headset experience and as a projected installation in a controlled gallery setting.
+  </p>
+</div>
+
+<div class="detail-card" data-modal="technology">
+  <h3>Technology</h3>
+      <p>
+      The project uses Blender for modeling and texturing, Unity for real-time scene assembly, lighting, physics, VFX,
+      and interaction, and C# scripts for runtime systems. Because Blender materials do not reliably translate into Unity,
+      the pipeline depended on texture baking and re-import iteration. Final deployment included a PC build and an
+      Android APK build for Meta Quest.
+    </p>
+</div>
+<div class="detail-card" data-modal="process">
+  <h3>Process</h3>
+  <p> Development followed an iterative loop across modeling, scale validation, interaction prototyping, material
+      troubleshooting, baking, lighting exploration, scene assembly, scripting, VFX polishing, and platform-specific
+      optimization. The workflow intentionally used Unity early to catch VR-scale issues and used baking to stabilize the
+      Blender-to-Unity material pipeline before final scene and performance work.</p>
+</div>
+
+<div class="detail-card" data-modal="constraints">
+  <h3>Constraints</h3>
+    <p>
+      The main constraints were hardware performance limits for standalone VR, Blender-to-Unity material incompatibility,
+      lighting calibration across headset and projection display, and the overhead introduced by physics-based
+      interactables and particle/VFX systems. These constraints shaped the pipeline: baking became mandatory, lighting was
+      iterated with performance in mind, and optimization was treated as a continuous requirement rather than a final
+      step.
+    </p>
+</div>
+
+  </div>
+</section>
+
+<!--templates for img/vid in here-->
+    <!--<img src="../../assets/z1_still2.png" alt="Zone One Environment" class="inline" >
+
+<div class="video-inline">
+  <iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+--> 
+
+<div class="detail-modal" id="concept">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Concept</h2>
+    <p>Zone One is a VR immersive installation built in Unity for Meta Quest, with optional PC tethering for higher-fidelity rendering. 
+    The project was developed as a real-time interactive environment that supports gesture-based graffiti interaction, dynamic object handling, and time-based visual decay systems.
+    It was designed to function both as a headset experience and as a projected installation in a controlled gallery setting.
+  </p>
+  <br>
+    <p>
+  The primary focus of this project was building a cinematic, modular, real-time environment that could support 
+  user-authored input layered over the environment.</p>
+  <p>All interactive props use standard VR grab and throw mechanics to maintain immediate learnability. 
+    No tutorials or UI prompts are provided; affordances are communicated through object behavior and scale.</p>
+  <p>Spray paint interaction introduces a temporary form of mark-making. 
+    Paint decals fade and self-destruct after a fixed lifetime, preventing accumulation and discouraging 
+    the user from worrying about completion or perfection. The interactiviyy is concentrated in movable props 
+    to avoid overwhelming the user and to preserve performance in a standalone VR context. 
+    Users loved being able to throw all objects off the scene, so this was intentionally allowed. </p>
+<br>
+The environment is constructed as a concrete underpass structure composed of pillar, 
+beam, and wall assets that were modelled in Blender. The layout was designed to:
+<br>
+<br>
+   <ul>
+  <li>Maintain clear navigation in VR</li>
+  <li>Provide multiple vertical and horizontal tagging surfaces</li>
+  <li>Create distinct lighting zones for visual hierarchy</li>
+  <li>Allow spatial flexibility within a ~15x15 ft tracked play area</li>
+</ul>
+<br>
+Assets were organized into logical groupings to maintain scene clarity and allow efficient iteration. <br>
+Environmental dressing includes debris systems (rocks, cables, signage, crates, trash bags), 
+all positioned to support spatial depth without obstructing locomotion.
+The scene was built with modular geometry to reduce draw calls and improve instancing opportunities.
+</p>
+<br>
+
+  </div>
+
+</div>
+<div class="detail-modal" id="technology">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Technology</h2>
+
+<br>
+ <p>
+      All environment and prop geometry was authored in Blender. The scene was hosted on Unity and displayed on a 
+      Meta Quest 3s, while simultaneously projected onto two TV screens to the sides. Ambient music played in the background. 
+      Blockout and modeling were done with VR-scale accuracy in mind, then exported into Unity early to validate spatial proportions in-engine. 
+    </p>
+    <br>
+    <p>
+      Texturing originated in Blender, but Unity import revealed that materials were not loading correctly. To resolve
+     material incompatibility, assets were baked into texture maps. Baking consolidated
+      surface information into textures Unity can reliably consume, avoiding reliance on Blender node graphs that do not
+      carry over. After baking, assets were re-imported inside Unity.
+    </p>
+    <br>
+    <img src="../../assets/image (30).png" class = "inline zoomable">
+    <br>
+    <p>
+      Unity handled scene layout, lighting configuration, collider setup, physics tuning, and particle system iteration.
+      Static lighting was baked where possible to reduce runtime cost for VR hardware. Interaction and runtime behavior
+      were implemented in C# scripts, integrated with XR interaction so objects could be grabbed and thrown.<br></p> 
+      <p>Particle
+      systems were iterated in the Unity viewport to achieve smooth motion while keeping counts and overdraw within a VR
+      budget. 
+    </p>
+    
+<br>
+
+  </div>
+
+
+</div>
+<div class="detail-modal" id="process">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Process</h2>
+    <p>
+   <p>
+      The project uses Blender for modeling and texturing, Unity for real-time scene assembly, lighting, physics, VFX,
+      and interaction, and C# scripts for runtime systems. Because Blender materials do not reliably translate into Unity,
+      the pipeline depended on texture baking and re-import iteration. Final deployment included PC testing and an
+      Android APK build for Meta Quest.
+    </p>
+
+    <p>
+      Development was a huge back and forth loop across modeling, scale validation, prototyping, material
+      troubleshooting, baking, lighting exploration, coding, scene assembly, scripting, VFX polishing, and platform-specific
+      optimization. Unity was implemented early to catch VR-scale issues and used baking to stabilize the
+      Blender-to-Unity material pipeline before final scene and performance work.
+    </p>
+<br>
+    <p>
+      The environment began with modeling and blockout in Blender. Structural forms and major props were established
+      first to define the navigable space and the density of the environment. Once the blockout reached a coherent
+      spatial layout, it was exported into Unity specifically to check scale and proportions inside the engine, because
+      VR exaggerates scale errors that might look acceptable in a DCC viewport.
+    </p>
+
+    
+      <div class="video-inline">
+  <iframe 
+    src="https://youtu.be/ACjPT5gtLyM"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+   
+    <br>
+    <p>
+      After verifying scale in Unity, core interactability was prototyped by making boxes grabbable and throwable. This
+      phase focused on adding XR interaction behavior, collider accuracy, and rigidbody stability in the space
+      before spending time on surface polish. Once interaction behavior worked, I returned to
+      Blender for texturing and surface development. Then, the fbx was shipped back to Unity. This is when disaster
+      struck, and it was discovered that every. single. texture. had to be baked in to display properly. This was when it 
+      became known that procedural materials do NOT carry over into other platforms.
+      <img src="../../assets/axiom_doc4.png" class = "inline zoomable">
+    </p>
+    <br>
+    <p>
+      I made alternate UV maps for each object. Initially I tried to 
+      make a python script to automate this, but scripting was taking longer than manually doing it, so I did each one individually.
+      I then baked everything to prepare it for export. After baking, assets were imported again, and worked. 
+      At this point, lighting became the next focus. Multiple lighting configurations were tested to find a balance between neon-heavy stylization, legibility of
+      materials, and runtime performance. This process included baking lighting and, where needed, baking assets to
+      reduce runtime overhead.
+    </p>
+    <br>
+    <p>
+      With the assets finalized and lighting direction chosen, scene assembly started. Colliders
+      and bounding volumes were created and tuned for objects throughout the environment to ensure predictable physics,
+      prevent clipping issues, and maintain stable interaction. After the scene was structurally complete, C# scripting
+      was implemented to support runtime behaviors and interaction (as documented alongside the attached script
+      images). 
+      <br>
+       <img src="../../assets/axiom_doc3.png" class = "inline zoomable">
+
+<br>
+ 
+<h3> The graffiti system:</h3>
+             <p>
+    The graffiti system is built around three coordinated C# scripts that manage input, decal spawning, and controlled decay.
+<strong>SprayInputXR</strong> interfaces directly with Unity’s XR system, detecting trigger input only when the spray can is actively grabbed via <code>XRGrabInteractable</code>.
+    <br> 
+    <br>
+    When engaged, it plays the attached <code>ParticleSystem</code> and continuously checks for active splats in the scene, triggering their fade cycle. 
+    <strong>SprayHit</strong>, which requires a <code>ParticleSystem</code>, converts particle collision events into decal 
+    instances by retrieving impact data, aligning spawned prefabs to the surface normal via 
+    <code>Quaternion.LookRotation</code>, and offsetting them slightly to prevent z-fighting. 
+    <br>
+    <br>
+    Each decal is instantiated at runtime. <strong>SplatDestroy</strong> governs lifecycle management by 
+    creating a per-instance material copy, linearly interpolating alpha over a defined lifetime using 
+    <code>Mathf.Lerp</code>, and destroying the GameObject when fully transparent, preventing indefinite accumulation. 
+  </p>
+  <br>
+  <p> In short:</p>
+   <br>
+      <strong>SplatDestroy.cs</strong> manages the lifecycle of each spawned graffiti decal by controlling timed fade and cleanup.
+  
+<br>
+      <strong>SprayHit.cs</strong> converts particle collisions into oriented decal instances.
+     <br>
+    <strong>SprayInputXR.cs</strong> governs user interaction and spray activation through Unity’s XR framework. 
+ 
+    <img src="../../assets/image (42).png" class = "inline zoomable">
+  <br>
+  <p>
+      Following scripting, the project returned to in-editor iteration for visual polish, including repeated
+      adjustment of particle systems until motion was smooth and visually consistent without destabilizing performance.
+    </p>
+    <img src="../../assets/particlesystem.png" class = "inline zoomable">
+   
+    <br>
+    <p>
+      The project was tested on PC to confirm function under comfortable
+      development conditions, then specifically optimized for VR deployment due to graphics and bandwidth restrictions. Optimization included reducing runtime costs
+      through baked lighting, controlling VFX intensity, and testing on standalone Quest 3s. Finally, the project was exported as an APK, deployed to the headset,
+      and presented.
+    </p>
+
+    </p>
+  </div>
+</div>
+<div class="detail-modal" id="constraints">
+  <div class="modal-content">
+    <button class="close-modal">×</button>
+    <h2>Constraints</h2>
+ <p>
+      Standalone VR imposes strict performance constraints that affect every system: lighting, shaders, particle
+      counts, physics, and scene complexity. This required prioritizing frame stability and reducing expensive real-time
+      rendering work. Lighting choices were constrained by the need to remain visually readable while avoiding too many
+      dynamic lights and shadow costs, especially under saturated neon palettes that can flatten materials and compress
+      value ranges.
+    </p>
+    <br>
+    <p>
+      The Blender-to-Unity pipeline introduced a major compatibility constraint: materials authored in Blender did not
+      reliably carry over when imported into Unity. This forced a shift from authored shader graphs to baked texture
+      outputs, adding iterative time but improving consistency and control in-engine. Baking also became a practical way
+      to standardize surface appearance under Unity’s lighting model and reduce runtime shader complexity where needed.
+    </p>
+    <br>
+    <p>
+      Presentation constraints were split between headset viewing and projection viewing. Projection reduces dynamic
+      range and can crush dark values, making neon-heavy scenes appear flatter or darker than intended. This required
+      lighting and exposure choices that preserved legibility across display contexts, rather than optimizing only for
+      the headset. This was in attempt to preserve the cinematic quality of the scene even when the display was 
+      not as high fidelity as in ideal environments. 
+    </p>
+    <br>
+    <p>
+      Interaction constraints came from physics and XR input. Grabbable and throwable objects require stable collider
+      setup, sensible rigidbody parameters, and well-defined bounds to prevent jitter, tunneling, or unexpected behavior.
+      Particle systems introduced additional constraints through overdraw and fill-rate limits; visual smoothness had to
+      be achieved without excessive particle counts or heavy materials that would compromise framerate, especially on
+      standalone hardware, which made object tracking, organization, and managment crucial. 
+    </p>
+    <br>
+  </div>
+</div>
+
+
+<!-- img gal -->
+<section class="project-gallery section">
+
+  <h2>Process & Documentation</h2>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-card">
+      <img src="../../assets/image_2025-12-13_173134962.png" alt="Process Sketch" class="zoomable">
+      <div class="gallery-caption">
+        Early spatial blockout.
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="../../assets/axiom_doc4.png" alt="Blender Scene" class="zoomable">
+      <div class="gallery-caption">
+        Blender modeling phase.
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="../../assets/z1_still3.png" alt="Unity Build" class="zoomable">
+      <div class="gallery-caption">
+        Unity viewport of the completed project.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div id="img-modal">
+  <img id="modal-img">
+</div>
+
+<section>
+  <footer>
+    <p>© 2025 Maitreyi V. Shrinivas ·  data integrity 99.9%</p>
+    <br>
+    <p>Built with HTML/CSS/JS</p>
+  </footer>
+
+</section>
+<!-- JS -->
+<script src="../../js/main.js"></script>
+<script src="../../js/carousel.js"></script>
+
+</body>
+</html>
