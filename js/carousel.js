@@ -36,9 +36,29 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   }
 
-  function startAutoScroll() {
-    autoScroll = setInterval(nextSlide, intervalTime);
+ function isCurrentSlideBlocking() {
+  const currentSlide = slides[currentIndex];
+
+  const video = currentSlide.querySelector("video");
+  if (video && !video.paused && !video.ended) {
+    return true;
   }
+
+  const iframe = currentSlide.querySelector("iframe");
+  if (iframe) {
+    return true;
+  }
+
+  return false;
+}
+
+function startAutoScroll() {
+  autoScroll = setInterval(() => {
+    if (!isCurrentSlideBlocking()) {
+      nextSlide();
+    }
+  }, intervalTime);
+}
 
   function stopAutoScroll() {
     clearInterval(autoScroll);
