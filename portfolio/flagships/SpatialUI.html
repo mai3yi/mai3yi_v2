@@ -80,7 +80,11 @@
   <br>
   <h2>Overview</h2>
   <p>
-  NetLink is an archive that uses simplicity to introduce a more hands on, spatial way of thinking and linking ideas.
+  NodeLink is an archive that presents a way to explore ideas
+  and notes in a way that differs from typical 
+  notetaking applications. By introducing friction to the 
+  interface on purpose, the user is more likely to feel 
+  that the notes are more personal and memorable to them once written.
   </p>
   <br>
   <p>
@@ -97,7 +101,8 @@
 <div class="detail-card" data-modal="concept">
   <h3>Concept</h3>
   <p>NodeLink is a spatial research archive. It presents research and thoughts as a dense field of interconnected
-nodes. Importance emerges through interaction, not hierarchy, and navigation is exploratory. It uses real design system logic, such as components, variants, tags, and states.
+nodes. The notes importance emerges through interaction, not hierarchy, and navigation is very exploratory. 
+It uses real design system logic, such as components, variants, tags, and states.
   </p>
 </div>
 
@@ -111,20 +116,25 @@ nodes. Importance emerges through interaction, not hierarchy, and navigation is 
 <div class="detail-card" data-modal="process">
   <h3>Process</h3>
   <p> This project was developed entirely in Unity and Unity's code editor, utilizng the UI and canvases
-    included in Unity's base kit. First, prefabs were assembled. Then, behavior was defined in scripts, attached
-    to a larger manager, and finally deployed as a full application. 
+    included in Unity's base kit. First, prefabs were assembled. 
+    Then, behavior was defined in scripts, attached
+    to a larger manager, and finally deployed as a full application as an executable, as well as on itch.io. 
   </p>
 </div>
 
 <div class="detail-card" data-modal="constraints">
   <h3>Constraints</h3>
     <p>
-      There were few real hardware constraints, but they came through in terms of making a simple
-      but intuitive UI that differed from generic node-based notetaking apps. There was also the issue
-      of edge cases, unwanted spawn points, and buttons being accidentally clicked with no undo button. 
-      Additionally, the problem of O(n)^2 complexity becoming mathematically impossible
-      to host on the application was a consideration. Although the app is highly unlikely to reach that level of data hosting, I still wanted 
-      to keep this issue in mind for future developments.
+      Difficulties arose in the form of
+      edge cases, unwanted spawn points, and user experience considerations that only became apparent
+      later in the work. Additionally, getting used to the Unity UI features took a bit of time to 
+      fully learn and manipulate.
+
+      Conceptually, the way I drew points and calculated tag weight in the system per frame compared 
+      every node to every other node, which meant performance would degrade linearly at high counts. However,
+      this issue only arose in testing, as the user would have to exceed 200 nodes to even start impacting
+      the system. 
+
 </div>
 
   </div>
@@ -146,38 +156,25 @@ nodes. Importance emerges through interaction, not hierarchy, and navigation is 
   <div class="modal-content">
     <button class="close-modal">×</button>
     <h2>Concept</h2>
-    <p>Zone One is a VR immersive installation built in Unity for Meta Quest, with optional PC tethering for higher-fidelity rendering. 
-    The project was developed as a real-time interactive environment that supports gesture-based graffiti interaction, dynamic object handling, and time-based visual decay systems.
-    It was designed to function both as a headset experience and as a projected installation in a controlled gallery setting.
-  </p>
+    <p>NodeLink is a spatial research archive that questions the standard model 
+      of note-taking as a frictionless process. Instead of organizing 
+      information into lists, folders, or feeds, it presents content as a dynamic 
+      field of interconnected nodes that must be navigated spatially. 
+
+     <br>
+The system deliberately introduces resistance into interaction. 
+Movement, selection, discovery, and creating a system for yourself will require effort, forcing the 
+user to engage with their notes as a constructed environment rather 
+than just text. The goal is for the user's memory is engaged through 
+interaction rather than convenience, paradoxically leading to a more efficient note taking method.
   <br>
-    <p>
-  The primary focus of this project was building a cinematic, modular, real-time environment that could support 
-  user-authored input layered over the environment.</p>
-  <p>All interactive props use standard VR grab and throw mechanics to maintain immediate learnability. 
-    No tutorials or UI prompts are provided; affordances are communicated through object behavior and scale.</p>
-  <p>Spray paint interaction introduces a temporary form of mark-making. 
-    Paint decals fade and self-destruct after a fixed lifetime, preventing accumulation and discouraging 
-    the user from worrying about completion or perfection. The interactiviyy is concentrated in movable props 
-    to avoid overwhelming the user and to preserve performance in a standalone VR context. 
-    Users loved being able to throw all objects off the scene, so this was intentionally allowed. </p>
+  NodeLink operates as a spatial system rather than a document-based one. 
+  Notes exist as independent nodes positioned within a bounded canvas, 
+  connected through relationships that are visually and behaviorally expressed.
+
+There is no fixed hierarchy. Importance is not assigned through size, placement, or sorting, but emerges through interaction. 
+Nodes gain relevance based on proximity, connection density, and user engagement.
 <br>
-The environment is constructed as a concrete underpass structure composed of pillar, 
-beam, and wall assets that were modelled in Blender. The layout was designed to:
-<br>
-<br>
-   <ul>
-  <li>Maintain clear navigation in VR</li>
-  <li>Provide multiple vertical and horizontal tagging surfaces</li>
-  <li>Create distinct lighting zones for visual hierarchy</li>
-  <li>Allow spatial flexibility within a ~15x15 ft tracked play area</li>
-</ul>
-<br>
-Assets were organized into logical groupings to maintain scene clarity and allow efficient iteration. <br>
-Environmental dressing includes debris systems (rocks, cables, signage, crates, trash bags), 
-all positioned to support spatial depth without obstructing locomotion.
-The scene was built with modular geometry to reduce draw calls and improve instancing opportunities.
-</p>
 <br>
 
   </div>
