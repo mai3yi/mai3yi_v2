@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> NodeUI | Maitreyi V. Shrinivas</title>
+  <title> Abstraction | Maitreyi V. Shrinivas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../../assets/favicon2.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,57 +27,69 @@
 <section class="project-hero">
     <a href="../../index.html" class="back">← back to portfolio</a>
 
-  <h1>Hazard Panel</h1>
+  <h1>Abstraction</h1>
   <div class="project-meta">
-    Proximity-based Piece · 2025 · C# / Arduino / After Effects
+    Serial-based interactive animation. · 2026 · Blender / Arduino / TouchDesigner
   </div>
 </section>
 
 
-<!-- my carousel! -->
-<section class="project-carousel">
+<!-- my carousel! --><section class="project-carousel">
 
   <div class="carousel-track">
 
-    <div class="carousel-slide">
-      <video controls>
-      <source src="../../assets/laptop_demo.mp4" type="video/mp4">
-      </video>
-    </div>
 
-    <div class="carousel-slide">
-      <video controls>
-        <source src="../../assets/standby.mp4" type="video/mp4">
-      </video>
+    
+      <div class="carousel-slide">
+  <iframe 
+    src="https://www.youtube.com/embed/ZTLkSd7VilI"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
 
-    </div>
-       <div class="carousel-slide">
-      <video controls>
-        <source src="../../assets/caution.mp4" type="video/mp4">
-      </video>
 
-    </div>
-       <div class="carousel-slide">
-      <video controls>
-        <source src="../../assets/alert.mp4" type="video/mp4">
-      </video>
+</div>
 
-    </div>
-       <div class="carousel-slide">
+     <!--<div class="carousel-slide">
       <video controls>
-        <source src="../../assets/lockdown.mp4" type="video/mp4">
+        <source src="../../assets/zone1_demo.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> -->
 
     <div class="carousel-slide">
-      <img src="../../assets/hazard_thumb.png" alt="VR Interaction" class="zoomable">
+      <img src="../../assets/STILL1.jpg" alt="Zone One Environment" class="zoomable">
     </div>
 
+        <div class="carousel-slide">
+      <img src="../../assets/STILL2.jpg" alt="Zone One Environment" class="zoomable">
+    </div>
+
+        <div class="carousel-slide">
+      <img src="../../assets/STILL3.jpg" alt="Zone One Environment" class="zoomable">
+    </div>
+
+        <div class="carousel-slide">
+      <img src="../../assets/STILL4.jpg" alt="Zone One Environment" class="zoomable">
+    </div>
+  
+            <div class="carousel-slide">
+      <img src="../../assets/STILL5.jpg" alt="Zone One Environment" class="zoomable">
+    </div>
+  
+  
+    <div class="carousel-slide">
+      <video controls>
+      <source src="../../assets/abstraction.mov" type="video/mp4">
+      </video>
+    </div>
+
+
+</div>
   </div>
-
-  <button class="carousel-btn prev">‹</button>
+<button class="carousel-btn prev">‹</button>
 <button class="carousel-btn next">›</button>
-
 </section>
 
 
@@ -85,7 +97,8 @@
 <section class="project-overview section">
   <h2>Overview</h2>
   <p>
-Hazard is a real-time visual system that simulates a threat monitoring interface. It changes its visuals depending on system state, using animated UI elements and color-coded alerts.
+Abstraction is an interactive installation that visualizes the layered structure of digital computing systems as a
+single continuous 3D animation.
   </p>
 </section>
 
@@ -97,104 +110,50 @@ Hazard is a real-time visual system that simulates a threat monitoring interface
   <div class="details-grid">
 <div class="detail-card" data-modal="concept">
   <h3>Concept</h3>
-<P>Hazard is a reactive surveillance-style interface that escalates visually as system states change depending on the viewer/user's poximity to a sensor. 
-  Each state has its own visual identity, and transitions feel progressive rather than abrupt. 
+<P>This project visualizes the layers of abstraction that exist within digital computing systems.
+Although users interact primarily with graphical interfaces, those interfaces sit on top of multiple
+hidden layers including high-level code, machine instructions, and physical hardware, resulting in
+less cognitive load at the cost of deep understanding and complexity. 
+<br>
+
 </P>
 
 </DIV>
 <div class="detail-card" data-modal="technology">
   <h3>Technology</h3>
-  <p>The system was made in TouchDesigner using a node-based structure. 
-    The sphere is generated procedurally through interconnected TOPs, CHOPs, and COMPs. 
-    A central state logic routes signals through the network to drive color shifts, 
-    animation intensity, overlays, and typography in real time. Everything updates live.</p>
+  <p>
+The piece moves through four levels of computation, represented visually as
+physical hardware (a modeled PCB), binary/machine code, high-level programming language, and a graphical
+interface. It was rendered in Blender and composited in After Effects, and the interaction was designed in TD.
+A physical potentiometer connected via a Xiao RP2350, which was chosen due to its small size, runs code
+written in the Arduino IDE to TouchDesigner through Serial. This allows the viewer to scrub through the
+animation timeline in real time, controlling the rate and direction of transition between layers.
+.</p>
 </div>
 
 <div class="detail-card" data-modal="process">
   <h3>Process</h3>
-  <p>I started by defining the escalation logic first: Standby → Caution → Alert → Lockdown. Then I built a visual language around that progression. graphics and warning elements were made in After Effects and tied into a centralized state system in TD. 
-    After that, it was refinement—adjusting density, animation speed, color dominance, and reorganizing the network so it stayed readable.</p>
+  <p> I started by blocking out my concept in blender and doing a test animation to ensure the overall structure. 
+    Then, I modelled and rendered an abstract shape over a composition that I made in photoshop as the main screen. I imported
+    it as an image texture on the first plane. Similarly, I made several assets in photoshop and composited them onto the blockout before 
+    detailing. I then added finer details and made sure it was visually well represented. I rendered two animations; one for when the slider
+    stayed at frame 0 for more than a second, and one for when the slider was turned. I used a switch in TD in order to use the serial 
+    values as reference points for each video to play. Then, I wired a potentiometer and connected it. Finally, I projected the project 
+    onto a screen and placed the potentiometer near it. 
+  </p>
 </div>
 
 <div class="detail-card" data-modal="constraints">
   <h3>Constraints</h3>
-  <p>The biggest constraint was coding a non-blocking system so that each state could be triggered
-    smoothly without a delay or interfering with other states. I solved this by restructuring the code 
-    into using <code>millis</code>.
-  Additionally, Each alert level had to be immediately readable without collapsing into nois, color coding needed to stay distinct while scaling intensity, and the node network had to stay modular enough to not become unmanageable. 
-    Performance mattered too; high-intensity states couldn’t tank frame rate. 
+  <p>The main constraint for this project, or at least the biggest challenge I faced, was the jittery serial values coming out through 
+    the potentiometer. Even though I placed a filter node in order to reduce the lag, it didn't work as seamlessly as I'd have liked it to. 
+    As a result, the frames had a slight jitter to them, even when still. However, it was perhaps to the piece's benefit-I feel it would 
+    have looked dead, or like a still image that wasn't meant to be interaced with, without any movement.     
    </p>
 </div>
 
   </div>
 </section>
-
-<div class="detail-modal" id="concept">
-  <div class="modal-content">
-    <button class="close-modal">×</button>
-    <h2>Concept</h2>
-    <p>
-      Hazard is a proximity-driven, state-based monitoring interface that escalates 
-      visually in response to physical distance. An Arduino reads proximity data and 
-      sends it over serial to TouchDesigner, where a centralized state system determines
-       whether the interface is in Standby, Caution, Alert, or Lockdown.
-        Each state modifies color dominance, animation intensity, overlay density, 
-        and intensity in real time. The escalation is threshold-based and structured, meaning the interface responds logically to distance rather than randomly shifting visuals. 
-      It’s a controlled system for urgency driven by the physical world.
-    </p>
-  </div>
-</div>
-<div class="detail-modal" id="technology">
-  <div class="modal-content">
-    <button class="close-modal">×</button>
-    <h2>Technology</h2>
-    <p>
-     The system operates across two layers: hardware input and real-time visual routing.
-
-On the hardware side, an Arduino reads proximity data and processes it using a Ultrasonic sensor connected to an LED, and non-blocking timing structure built with millis. This prevents delays or frozen states that would occur with blocking functions. Sensor readings are continuously evaluated against defined thresholds without interrupting other processes.
-
-That data is sent via serial into TouchDesigner, where it enters a node-based processing chain. The incoming values are cleaned and organized before being routed into a centralized state logic structure. Expression and logic operators determine which state is active based on proximity ranges.
-
-Each alert state exists as a modular visual block inside TouchDesigner. These modules contain imported After Effects graphics, warning typography, and animated overlays. A switch operator selects the active state, while compositing and level operators manage final brightness and blending. Escalation is handled in After Effects, and relies on hardcoded designs.
-
-The architecture is layered: proximity input → serial processing → state logic → visual module routing → composited output. 
-    </p>
-  </div>
-</div>
-<div class="detail-modal" id="process">
-  <div class="modal-content">
-    <button class="close-modal">×</button>
-    <h2>Process</h2>
-    <p>
-      The process began with defining proximity thresholds and structuring the escalation ladder before building visuals.
-       I determined how distance would map to Standby, Caution, Alert, and Lockdown, then implemented non-blocking timing in Arduino using millis 
-       to ensure continuous sensor polling.
-
-Once hardware logic was stable, I moved into TouchDesigner.
-\ Serial data was imported and routed into a centralized state logic network. 
-Each state was built as a modular visual block containing AE-generated assets, warning systems, and animated overlays.
-
-After integration, refinement focused on stability and clarity. 
-Threshold ranges were adjusted to prevent jitter. Transition behavior was tuned so escalation felt controlled instead of abrupt. Visual density and color dominance were balanced to maintain readability under high-intensity states. Finally, the node network was reorganized to remain modular and readable as complexity increased.
-
-    </p>
-  </div>
-</div>
-<div class="detail-modal" id="constraints">
-  <div class="modal-content">
-    <button class="close-modal">×</button>
-    <h2>Constraints</h2>
-    <p>
-      The primary technical constraint was preventing state transitions from blocking one another. Using traditional delay-based timing would freeze execution and interrupt sensor responsiveness. The solution was restructuring the Arduino logic around millis, allowing continuous proximity evaluation while maintaining smooth transitions.
-
-Signal stability was another constraint. Proximity readings fluctuate, so thresholds had to be structured carefully to avoid flickering between states. The escalation system required clean boundaries so only one dominant state could control the interface at a time.
-
-Visually, escalation had to scale without collapsing clarity. As the system moves toward Alert and Lockdown, color saturation and animation density increase, but typography and UI panels still need to remain legible. Red dominance, in particular, risks overpowering contrast, so intensity had to be tuned rather than maximized.
-Performance also imposed limits—higher density and motion could not compromise real-time rendering.
-    </p>
-  </div>
-</div>
-
 
 <!-- img gal -->
 <section class="project-gallery section">
@@ -204,25 +163,55 @@ Performance also imposed limits—higher density and motion could not compromise
   <div class="gallery-grid">
 
     <div class="gallery-card">
-      <img src="../../assets/hazard_td1.png" alt="Process Sketch" class="zoomable">
+      <img src="../../assets/abssketch.png" alt="Process Sketch" class="zoomable">
       <div class="gallery-caption">
-       Full system.
+       First sketch. 
+      </div>
+    </div>
+
+
+    <div class="gallery-card">
+      <img src="../../assets/absrendertest.png" alt="Process Sketch" class="zoomable">
+      <div class="gallery-caption">
+       Test render.  
       </div>
     </div>
 
     <div class="gallery-card">
-      <img src="../../assets/hazard_td2.png" alt="Blender Scene" class="zoomable">
+      <img src="../../assets/touchdesignerabs.png" alt="Process Sketch" class="zoomable">
       <div class="gallery-caption">
-        Close up of the first half.
+       Touchdesigner network.  
       </div>
     </div>
 
     <div class="gallery-card">
-      <img src="../../assets/hazard_td3.png" alt="Unity Build" class="zoomable">
-      <div class="gallery-caption">
-        Close up of the second half.
-      </div>
+      <video style="width: 100%; height: auto;"" controls>>
+      <source src="../../assets/abstraction.mov" type="video/mp4">
+      </video>
+         <div class="gallery-caption">
+       Export from the first layer's graphics, which was also made in blender.
     </div>
+</div>
+
+      <div class="gallery-card">
+      <video style="width: 100%; height: auto;" controls>>
+      <source src="../../assets/clearvid.mov" type="video/mp4">
+      </video>
+         <div class="gallery-caption">
+       Raw blender export of the full composition.
+
+    </div>
+
+    </div>
+        <div class="gallery-card">
+      <video style="width: 100%; height: auto;"" controls>>
+      <source src="../../assets/previewanim.mp4" type="video/mp4">
+      </video>
+         <div class="gallery-caption">
+       A test animation to check the caustics and distortion of the glass material I initially wanted to use. 
+    </div>
+</div>
+
 
   </div>
 

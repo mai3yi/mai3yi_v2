@@ -66,7 +66,9 @@
         <div class="carousel-slide">
       <img src="../../assets/sui_2.png" alt="Zone One Environment" class="zoomable">
     </div>
-
+        <div class="carousel-slide">
+      <img src="../../assets/sui_3.png" alt="Zone One Environment" class="zoomable">
+    </div>
 
 </div>
   </div>
@@ -85,6 +87,11 @@
   notetaking applications. By introducing friction to the 
   interface on purpose, the user is more likely to feel 
   that the notes are more personal and memorable to them once written.
+<br>
+<br>
+  <a href="https://v1rios.itch.io/spatial-ui">>> Try it here!</a><br>
+  <h6>*Please note that the demo version on itch.io does not have persistence and cannot be downloaded as it is only for preview purposes.</h6>
+
   </p>
   <br>
   <p>
@@ -112,6 +119,10 @@ It uses real design system logic, such as components, variants, tags, and states
       The project is fairly simple in terms of technology. It was distributed via and executable and simultaneously 
       hosted on itch for demonstration purposes. 
     </p>
+     <p>
+      Unity was used for the UI layout, configuration, and deployment. Interaction and runtime behavior
+      were implemented in C# scripts, integrated with custom behavior to make the app behave as planned.<br></p> 
+     </p>
 </div>
 <div class="detail-card" data-modal="process">
   <h3>Process</h3>
@@ -187,184 +198,49 @@ Nodes gain relevance based on proximity, connection density, and user engagement
 
 <br>
  <p>
-      All environment and prop geometry was authored in Blender. The scene was hosted on Unity and displayed on a 
-      Meta Quest 3s, while simultaneously projected onto two TV screens to the sides. Ambient music played in the background. 
-      Blockout and modeling were done with VR-scale accuracy in mind, then exported into Unity early to validate spatial proportions in-engine. 
+           <p>
+      The project is fairly simple in terms of technology. It was distributed via and executable and simultaneously 
+      hosted on itch for demonstration purposes. 
     </p>
-    <br>
     <p>
-      Texturing originated in Blender, but Unity import revealed that materials were not loading correctly. To resolve
-     material incompatibility, assets were baked into texture maps. Baking consolidated
-      surface information into textures Unity can reliably consume, avoiding reliance on Blender node graphs that do not
-      carry over. After baking, assets were re-imported inside Unity.
-    </p>
-    <br>
-    <img src="../../assets/image (30).png" class = "inline zoomable">
-    <br>
-    <p>
-      Unity handled scene layout, lighting configuration, collider setup, physics tuning, and particle system iteration.
-      Static lighting was baked where possible to reduce runtime cost for VR hardware. Interaction and runtime behavior
-      were implemented in C# scripts, integrated with XR interaction so objects could be grabbed and thrown.<br></p> 
-      <p>Particle
-      systems were iterated in the Unity viewport to achieve smooth motion while keeping counts and overdraw within a VR
-      budget. 
-    </p>
+      Unity was used for the UI layout, configuration, and deployment. Interaction and runtime behavior
+      were implemented in C# scripts, integrated with custom behavior to make the app behave as planned.<br></p> 
+     </p>
     
 <br>
 
   </div>
 
-
+  </div>
 </div>
+
 <div class="detail-modal" id="process">
   <div class="modal-content">
     <button class="close-modal">×</button>
     <h2>Process</h2>
-    <p>
-   <p>
-      The project uses Blender for modeling and texturing, Unity for real-time scene assembly, lighting, physics, VFX,
-      and interaction, and C# scripts for runtime systems. Because Blender materials do not reliably translate into Unity,
-      the pipeline depended on texture baking and re-import iteration. Final deployment included PC testing and an
-      Android APK build for Meta Quest.
-    </p>
-
-    <p>
-      Development was a huge back and forth loop across modeling, scale validation, prototyping, material
-      troubleshooting, baking, lighting exploration, coding, scene assembly, scripting, VFX polishing, and platform-specific
-      optimization. Unity was implemented early to catch VR-scale issues and used baking to stabilize the
-      Blender-to-Unity material pipeline before final scene and performance work.
-    </p>
-<br>
-    <p>
-      The environment began with modeling and blockout in Blender. Structural forms and major props were established
-      first to define the navigable space and the density of the environment. Once the blockout reached a coherent
-      spatial layout, it was exported into Unity specifically to check scale and proportions inside the engine, because
-      VR exaggerates scale errors that might look acceptable in a DCC viewport.
-    </p>
-
-    
-      <div class="video-inline">
-  <iframe 
-    src="https://www.youtube.com/embed/ACjPT5gtLyM"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
-   
-    <br>
-    <p>
-      After verifying scale in Unity, core interactability was prototyped by making boxes grabbable and throwable. This
-      phase focused on adding XR interaction behavior, collider accuracy, and rigidbody stability in the space
-      before spending time on surface polish. Once interaction behavior worked, I returned to
-      Blender for texturing and surface development. Then, the fbx was shipped back to Unity. This is when disaster
-      struck, and it was discovered that every. single. texture. had to be baked in to display properly. This was when it 
-      became known that procedural materials do NOT carry over into other platforms.
-      <img src="../../assets/axiom_doc4.png" class = "inline zoomable">
-    </p>
-    <br>
-    <p>
-      I made alternate UV maps for each object. Initially I tried to 
-      make a python script to automate this, but scripting was taking longer than manually doing it, so I did each one individually.
-      I then baked everything to prepare it for export. After baking, assets were imported again, and worked. 
-      At this point, lighting became the next focus. Multiple lighting configurations were tested to find a balance between neon-heavy stylization, legibility of
-      materials, and runtime performance. This process included baking lighting and, where needed, baking assets to
-      reduce runtime overhead.
-    </p>
-    <br>
-    <p>
-      With the assets finalized and lighting direction chosen, scene assembly started. Colliders
-      and bounding volumes were created and tuned for objects throughout the environment to ensure predictable physics,
-      prevent clipping issues, and maintain stable interaction. After the scene was structurally complete, C# scripting
-      was implemented to support runtime behaviors and interaction (as documented alongside the attached script
-      images). 
-      <br>
-       <img src="../../assets/axiom_doc3.png" class = "inline zoomable">
-
-<br>
- 
-<h3> The graffiti system:</h3>
-             <p>
-    The graffiti system is built around three coordinated C# scripts that manage input, decal spawning, and controlled decay.
-<strong>SprayInputXR</strong> interfaces directly with Unity’s XR system, detecting trigger input only when the spray can is actively grabbed via <code>XRGrabInteractable</code>.
-    <br> 
-    <br>
-    When engaged, it plays the attached <code>ParticleSystem</code> and continuously checks for active splats in the scene, triggering their fade cycle. 
-    <strong>SprayHit</strong>, which requires a <code>ParticleSystem</code>, converts particle collision events into decal 
-    instances by retrieving impact data, aligning spawned prefabs to the surface normal via 
-    <code>Quaternion.LookRotation</code>, and offsetting them slightly to prevent z-fighting. 
-    <br>
-    <br>
-    Each decal is instantiated at runtime. <strong>SplatDestroy</strong> governs lifecycle management by 
-    creating a per-instance material copy, linearly interpolating alpha over a defined lifetime using 
-    <code>Mathf.Lerp</code>, and destroying the GameObject when fully transparent, preventing indefinite accumulation. 
-  </p>
-  <br>
-  <p> In short:</p>
-   <br>
-      <strong>SplatDestroy.cs</strong> manages the lifecycle of each spawned graffiti decal by controlling timed fade and cleanup.
-  
-<br>
-      <strong>SprayHit.cs</strong> converts particle collisions into oriented decal instances.
-     <br>
-    <strong>SprayInputXR.cs</strong> governs user interaction and spray activation through Unity’s XR framework. 
- 
-    <img src="../../assets/image (42).png" class = "inline zoomable">
-  <br>
-  <p>
-      Following scripting, the project returned to in-editor iteration for visual polish, including repeated
-      adjustment of particle systems until motion was smooth and visually consistent without destabilizing performance.
-    </p>
-    <img src="../../assets/particlesystem.png" class = "inline zoomable">
-   
-    <br>
-    <p>
-      The project was tested on PC to confirm function under comfortable
-      development conditions, then specifically optimized for VR deployment due to graphics and bandwidth restrictions. Optimization included reducing runtime costs
-      through baked lighting, controlling VFX intensity, and testing on standalone Quest 3s. Finally, the project was exported as an APK, deployed to the headset,
-      and presented.
-    </p>
-
-    </p>
+   This project was developed entirely in Unity and Unity's code editor, 
+   utilizng the UI and canvases included in Unity's base kit. 
+   First, prefabs were assembled. Then, behavior was defined in scripts, 
+   attached to a larger manager, and finally deployed as a full application as an executable, as well as on itch.io.
   </div>
 </div>
 <div class="detail-modal" id="constraints">
   <div class="modal-content">
     <button class="close-modal">×</button>
-    <h2>Constraints</h2>
- <p>
-      Standalone VR imposes strict performance constraints that affect every system: lighting, shaders, particle
-      counts, physics, and scene complexity. This required prioritizing frame stability and reducing expensive real-time
-      rendering work. Lighting choices were constrained by the need to remain visually readable while avoiding too many
-      dynamic lights and shadow costs, especially under saturated neon palettes that can flatten materials and compress
-      value ranges.
-    </p>
-    <br>
-    <p>
-      The Blender-to-Unity pipeline introduced a major compatibility constraint: materials authored in Blender did not
-      reliably carry over when imported into Unity. This forced a shift from authored shader graphs to baked texture
-      outputs, adding iterative time but improving consistency and control in-engine. Baking also became a practical way
-      to standardize surface appearance under Unity’s lighting model and reduce runtime shader complexity where needed.
-    </p>
-    <br>
-    <p>
-      Presentation constraints were split between headset viewing and projection viewing. Projection reduces dynamic
-      range and can crush dark values, making neon-heavy scenes appear flatter or darker than intended. This required
-      lighting and exposure choices that preserved legibility across display contexts, rather than optimizing only for
-      the headset. This was in attempt to preserve the cinematic quality of the scene even when the display was 
-      not as high fidelity as in ideal environments. 
-    </p>
-    <br>
-    <p>
-      Interaction constraints came from physics and XR input. Grabbable and throwable objects require stable collider
-      setup, sensible rigidbody parameters, and well-defined bounds to prevent jitter, tunneling, or unexpected behavior.
-      Particle systems introduced additional constraints through overdraw and fill-rate limits; visual smoothness had to
-      be achieved without excessive particle counts or heavy materials that would compromise framerate, especially on
-      standalone hardware, which made object tracking, organization, and managment crucial. 
-    </p>
-    <br>
+     <h2>Constraints</h2>
+      Difficulties arose in the form of
+      edge cases, unwanted spawn points, and user experience considerations that only became apparent
+      later in the work. Additionally, getting used to the Unity UI features took a bit of time to 
+      fully learn and manipulate.
+
+      Conceptually, the way I drew points and calculated tag weight in the system per frame compared 
+      every node to every other node, which meant performance would degrade linearly at high counts. However,
+      this issue only arose in testing, as the user would have to exceed 200 nodes to even start impacting
+      the system. 
+
   </div>
 </div>
-
+</section>
 
 <!-- img gal -->
 <section class="project-gallery section">
@@ -374,23 +250,23 @@ Nodes gain relevance based on proximity, connection density, and user engagement
   <div class="gallery-grid">
 
     <div class="gallery-card">
-      <img src="../../assets/image_2025-12-13_173134962.png" alt="Process Sketch" class="zoomable">
+      <img src="../../assets/sui_base4.png" alt="Process Sketch" class="zoomable">
       <div class="gallery-caption">
-        Early spatial blockout.
+        Early blockout.
       </div>
     </div>
 
     <div class="gallery-card">
-      <img src="../../assets/axiom_doc4.png" alt="Blender Scene" class="zoomable">
+      <img src="../../assets/sui_base1.png" alt="Blender Scene" class="zoomable">
       <div class="gallery-caption">
-        Blender modeling phase.
+        Adding in scripts and refining prefabs, deciding the final layout.
       </div>
     </div>
 
     <div class="gallery-card">
-      <img src="../../assets/z1_still3.png" alt="Unity Build" class="zoomable">
+      <img src="../../assets/sui_3.png" alt="Unity Build" class="zoomable">
       <div class="gallery-caption">
-        Unity viewport of the completed project.
+        Unity viewport of the completed project before detailing and visual refinement.
       </div>
     </div>
 
